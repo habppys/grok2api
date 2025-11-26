@@ -1,0 +1,11 @@
+services:
+  grok2api:
+    build: .
+    image: grok2api
+    container_name: grok2api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - /root/grok2api/data:/app/data
+      - /root/grok2api/logs:/app/logs

@@ -1,0 +1,40 @@
+# Grok2API 配置文件示例
+# 使用说明：将此文件复制为 setting.toml 并填入您的真实配置
+
+[grok]
+# API密钥 - 用于保护API访问（可选）
+# 如果设置，客户端需要在请求头中提供: Authorization: Bearer <api_key>
+api_key = ""
+
+# 代理设置 - 访问Grok API时使用的HTTP代理（可选）
+# 格式: http://proxy.example.com:8080 或 socks5://proxy.example.com:1080
+proxy_url = ""
+
+# Cloudflare Clearance Token - 如果遇到Cloudflare拦截时需要（可选）
+# 从浏览器Cookie中获取 cf_clearance 的值
+cf_clearance = ""
+
+# Statsig ID - 反机器人标识符（必填，已提供默认值）
+# 通常无需修改，除非Grok更新了反爬策略
+x_statsig_id = "ZTpUeXBlRXJyb3I6IENhbm5vdCByZWFkIHByb3BlcnRpZXMgb2YgdW5kZWZpbmVkIChyZWFkaW5nICdjaGlsZE5vZGVzJyk="
+
+# 响应过滤标签 - 从响应中过滤的内容标签（逗号分隔）
+filtered_tags = "xaiartifact,xai:tool_usage_card,grok:render"
+
+# 流式响应超时设置
+stream_chunk_timeout = 120              # 数据块超时(秒)
+stream_total_timeout = 600              # 总超时(秒)
+stream_first_response_timeout = 30      # 首次响应超时(秒)
+
+# 会话模式 - true表示临时会话，false表示持久会话
+temporary = true
+
+# 显示思考过程 - true显示模型思考过程，false隐藏
+show_thinking = true
+
+# 动态Statsig - 启用动态反爬参数（推荐保持true）
+dynamic_statsig = true
+
+[global]
+# 日志级别：DEBUG, INFO, WARNING, ERROR
+log_level = "INFO"

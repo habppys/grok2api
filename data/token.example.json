@@ -1,0 +1,9 @@
+{
+  "sso": {
+    "xxxxxx": {
+      "remainingQueries": -1,
+      "heavyremainingQueries": -1
+    }
+  },
+  "ssoSuper": {}
+}

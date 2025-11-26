@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile:*)",
+      "Bash(python:*)",
+      "Bash(dir /B:*)",
+      "Skill(codex)",
+      "Bash(python3 ~/.claude/skills/codex/scripts/codex.py \"从 app/template/admin.html 中移除所有 MySQL 和 Redis 相关的残留代码：\n\n1. 删除 modeConfig 对象中的 MYSQL 和 REDIS 配置（只保留 FILE）\n2. 简化 loadStorageMode 函数，因为后端只返回 FILE 模式\n3. 删除所有与 storageMode hover card 相关的复杂定位和事件处理代码（因为只有一种模式，不需要复杂交互）\n4. 删除 updateHoverCardPosition 函数及其所有调用\n5. 保持 DOMContentLoaded 事件处理器的简洁性\n\n当前 admin.html 中从第 635-636 行附近开始有一段复杂的存储模式显示逻辑，包含 MYSQL/REDIS/FILE 三种模式的配置、hover card 定位、事件监听等，需要将其简化为仅显示 FILE 模式的最小实现。\")",
+      "Bash(cat:*)",
+      "Bash(uv run:*)",
+      "Bash(rm:*)",
+      "Bash(python3 -m py_compile:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "Bash(python3:*)",
+      "Bash(git -C /mnt/d/works/augment/grok2api remote:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

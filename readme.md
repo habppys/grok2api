@@ -127,25 +127,13 @@ services:
 
 #### 部署步骤
 
-**步骤 1：创建虚拟环境（推荐）**
-
-```bash
-python -m venv venv
-
-# Windows
-venv\Scripts\activate
-
-# Linux/macOS
-source venv/bin/activate
-```
-
-**步骤 2：安装依赖**
+**步骤 1：安装依赖**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**步骤 3：准备配置文件**
+**步骤 2：准备配置文件**
 
 项目提供了示例文件 `data/setting.example.toml`，先复制一份并编辑：
 
@@ -169,7 +157,7 @@ cf_clearance = ""               # Cloudflare token（如被拦截）
 log_level = "INFO"              # 日志级别：DEBUG/INFO/WARNING/ERROR
 ```
 
-**步骤 4：准备 Token 文件**
+**步骤 3：准备 Token 文件**
 
 项目提供了示例文件 `data/token.example.json`，先复制一份并编辑：
 

@@ -24,7 +24,7 @@
 # 非流式响应（直接返回完整结果）
 curl http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer your_token_here" \
+  -H "Authorization: Bearer your_api_key" \
   -d '{
     "model": "grok-4-fast",
     "messages": [
@@ -39,7 +39,7 @@ curl http://localhost:8000/v1/chat/completions \
 # 流式响应（逐字返回，体验更好）
 curl http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer your_token_here" \
+  -H "Authorization: Bearer your_api_key" \
   -d '{
     "model": "grok-4-fast",
     "messages": [
@@ -66,7 +66,7 @@ OpenAI 标准的图片分析格式：
 ```bash
 curl http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer your_token_here" \
+  -H "Authorization: Bearer your_api_key" \
   -d '{
     "model": "grok-4-fast",
     "messages": [

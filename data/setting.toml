@@ -1,0 +1,18 @@
+[server]
+host = "0.0.0.0"
+port = 8000
+api_key = "ABcd1688"
+
+[grok]
+sso_token = ""
+model = "grok-4-fast"
+timeout = 30
+retry_times = 3
+
+[log]
+level = "INFO"
+path = "/app/logs/grok2api.log"
+
+[token_pool]
+enable = false
+tokens = []

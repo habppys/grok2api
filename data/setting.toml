@@ -1,3 +1,8 @@
+[global]
+# 全局配置，项目必需，不要删除
+debug = false
+environment = "production"
+
 [server]
 host = "0.0.0.0"
 port = 8000
